@@ -9,3 +9,17 @@
   margin: 0 auto;
   padding: 0 15px;
 }
+
+body {
+  color: $default-color;
+  @extend %rubick-400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+a{
+  text-decoration: none;
+  color: $default-color;
+}
+
+
