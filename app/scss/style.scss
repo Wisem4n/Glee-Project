@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -28,7 +29,24 @@
 .user-nav {
   display: flex;
   .user-btn {
-    padding-left: 75px;
+    padding-left: 25px;
+  }
+  &__wrapper {
+    display: flex;
+    width: 210px;
+    background-image: url(../images/icon/iconbg.png);
+    background-repeat: no-repeat;
+    background-position-x: 30px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 33px;
+      background-color: #fff;
+      right: 88px;
+      top: 10px;
+    }
   }
   .user-cart {
     padding-left: 60px;
@@ -47,11 +65,12 @@
       background-color: #fff;
       text-align: center;
       font-size: 10px;
+      line-height: 18px;
     }
   }
   .user-fav {
     padding-top: 17px;
-    padding-left: 80px;
+    padding-left: 70px;
     position: relative;
     & span {
       position: absolute;
@@ -66,6 +85,7 @@
       background-color: #fff;
       text-align: center;
       font-size: 10px;
+      line-height: 18px;
     }
   }
 }
@@ -121,11 +141,88 @@
     }
   }
   &-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 35px 0;
+      &__nav-link {
+        padding: 0 15px;
+    }
+      &__nav-link + .footer-bottom__nav-link {
+        border-left: 1px solid $default-color;
+    }
   }
 }
 
-
+.top-slider{
+  margin-top: 50px;
+  background-image: url(../images/slider/top-slider-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 65px;
+  &__item .container-main {
+    display: flex;
+  }
+  &__title {
+    margin: 220px 0 35px;
+    @extend %rubick-500;
+    font-size: 72px;
+    line-height: 70px;
+    width: 420px;
+    color: #243f4d;
+  }
+  &__text {
+    width: 370px;
+    @extend %rubick-400;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 40px;
+  }
+  &__btn button {
+    @extend %rubick-500;
+    font-size: 15px;
+    line-height: 12px;
+    border: none;
+    background-color: #a3bbc8;
+    color: #fff;
+    padding: 20px 100px 20px 30px;
+  }
+  &__btn {
+    position: relative;
+  }
+  &__btn::before {
+    position: absolute;
+    content: '';
+    width: 22px;
+    height: 9px;
+    background-image: url(../images/slider/arrow.png);
+    top: 5px;
+    left: 160px;
+  }
+  &__image {
+    margin: 280px 0 0 120px;
+  }
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 180px;
+    & button {
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fde3cc;
+    font-size: 11px;
+    @extend %rubick-500;
+    line-height: 9px;
+    color: #708088;
+    margin-left: 15px;
+    }
+    & .slick-active button {
+      background-color: #fff;
+    }
+  }
+}
 
 
 
