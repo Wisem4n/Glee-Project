@@ -5,4 +5,6 @@ $(function () {
     arrows: false
   });
 
+  var mixer = mixitup('.products__gallery');
+
 });

@@ -10,6 +10,14 @@
   padding: 0 15px;
 }
 
+.title {
+  text-align: center;
+  color: #191919;
+  font-size: 36px;
+  line-height: 40px;
+  @extend %dmsans-700;
+}
+
 body {
   color: $default-color;
   @extend %rubick-400;
