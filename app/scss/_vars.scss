@@ -28,3 +28,11 @@ $title-color: #1f2044;
 @function max($numbers...) {
   @return m#{i}x(#{$numbers});
 }
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
