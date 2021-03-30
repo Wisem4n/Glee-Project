@@ -36,3 +36,25 @@ $title-color: #1f2044;
   clip: rect(0 0 0 0);
   position: absolute;
 }
+
+%btn {
+  padding: 12px 55px;
+  border: none;
+  border-radius: 5px;
+  background-color: #edf1f4;
+  color: #243f4d;
+  font-size: 15px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+%btn-hover {
+  padding: 12px 55px;
+  border: none;
+  border-radius: 5px;
+  background-color: #a3bbc8;
+  color: #fff;
+  font-size: 15px;
+  line-height: 30px;
+  cursor: pointer;
+}
