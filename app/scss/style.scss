@@ -1224,26 +1224,28 @@
       color: #243f4d;
     }
   }
-  &-info {
-    &__slider {
-      &-btn {
+  &-tabs {
+    &__top {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 35px;
+      a + a {
+      margin-left: 15px;
+      }
+      &-item {
         @extend %btn;
-        &:hover {
-          @extend %btn-hover;
+        &--active {
+          @extend %btn-active;
         }
       }
-      &-nav {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 35px;
-        button + button {
-          margin-left: 15px;
-        }
-      }
-      &-content p {
-        font-size: 16px;
-        line-height: 30px;
-        color: #243f4d;
+    }
+    &__content-item {
+      font-size: 16px;
+      line-height: 30px;
+      color: #243f4d;
+      display: none;
+      &--active {
+        display: block;
       }
     }
   }
@@ -1319,6 +1321,18 @@
     }
   }
 }
+
+.related {
+
+}
+
+
+
+
+
+
+
+
 
 
 @import 'media';
