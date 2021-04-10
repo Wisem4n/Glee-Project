@@ -1,0 +1,95 @@
+.about {
+  padding: 120px 0;
+  color: #243f4d;
+  &__title {
+    margin: 50px 0;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info {
+    padding: 85px 0 100px 45px;
+    &-intro {
+      display: flex;
+      align-items: flex-end;
+    }
+    &-subtitle {
+      font-size: 16px;
+      line-height: 30px;
+      padding-left: 30px;
+    }
+    &-text {
+      font-size: 16px;
+      line-height: 30px;
+      padding-bottom: 65px;
+    }
+    &-items {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 40px;
+      border-top: 2px solid #f6f6f6;
+    }
+    &-projects,
+    &-revenue,
+    &-awards {
+      position: relative;
+    }
+    &-projects::before {
+      position: absolute;
+      content: '';
+      background-image: url(../images/about/project-icon.svg);
+      width: 36px;
+      height: 38px;
+      top: 0;
+      left: -56px;
+    }
+    &-revenue::before {
+      position: absolute;
+      content: '';
+      background-image: url(../images/about/revenue-icon.svg);
+      width: 43px;
+      height: 39px;
+      top: 0;
+      left: -63px;
+    }
+    &-awards::before {
+      position: absolute;
+      content: '';
+      background-image: url(../images/about/award-icon.svg);
+      width: 42px;
+      height: 40px;
+      top: 0;
+      left: -62px;
+    }
+    &-type {
+      color: #4c4c4c;
+    }
+  }
+  &__statistics {
+    background-color: #fcd7b6;
+    padding: 85px 0;
+    &-inner {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+    &-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 150px;
+    }
+    &-title {
+      @extend %dmsans-700;
+      font-size: 36px;
+      line-height: 32px;
+      color: $title-color;
+    }
+    &-text {@extend %dmsans-700;
+      font-size: 18px;
+      line-height: 32px;
+      color: $title-color;}
+  }
+}

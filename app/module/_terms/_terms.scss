@@ -1,0 +1,26 @@
+.terms {
+  padding: 120px 0;
+  color: #243f4d;
+  &__title {
+    @extend %rubick-500;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  &__content-list {
+    margin-bottom: 75px;
+    list-style: decimal-leading-zero;
+    list-style-position: inside;
+  }
+  &__content-text {
+    margin-bottom: 35px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  &__text {
+    margin-bottom: 75px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
