@@ -18,6 +18,29 @@
       padding-left: 35px;
     }
   }
+  &__btn {
+    display: none;
+    position: relative;
+    border: none;
+    width: 20px;
+    height: 3px;
+    background-color: #a3bbc8;
+    padding: 0;
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 3px;
+      background-color: #a3bbc8;
+      left: 0;
+    }
+    &::before {
+      top: -8px;
+    }&::after {
+      top: 7px;
+    }
+  }
 }
 
 .user-nav {
@@ -87,5 +110,8 @@
 @media (max-width: 1100px){
   .menu {
       display: none;
+      &__btn {
+        display: block;
+      }
   }
 }

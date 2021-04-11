@@ -7,3 +7,10 @@
   background-image: url(../images/video-bg.jpg);
   margin-bottom: 115px;
 }
+
+@media (max-width: 768px){
+  .video {
+    background-position: center;
+    margin-bottom: 60px;
+  }
+}
