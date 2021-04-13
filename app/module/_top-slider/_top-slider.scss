@@ -69,3 +69,50 @@
     }
   }
 }
+
+@media (max-width: 1024px){
+  .top {
+    &-slider {
+      &__image {
+        margin: 175px 0 0 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .top {
+    &-slider {
+      &__image {
+        display: none;
+      }
+      &__content {
+        text-align: center;
+        width: 100%;
+      }
+      &__title {
+        font-size: 60px;
+        width: 100%;
+        text-align: center;
+        margin: 60px 0 35px;
+      }
+      &__text {
+        width: 100%;
+      }
+      & .slick-dots {
+        margin-top: 60px;
+      }
+    }
+  }
+}
+
+@media (max-width:450px){
+  .top {
+    &-slider {
+      &__title {
+        font-size: 36px;
+        line-height: 42px;
+      }
+    }
+  }
+}
