@@ -248,3 +248,22 @@
   justify-content: flex-start;
 }
 
+@media (max-width: 1024px){
+  .shop .products__gallery-item {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    img {
+      width: 150px;
+      height: 220px;
+      object-fit: contain;
+    }
+  }
+  .shop-products {
+    max-width: 700px;
+    width: 100%;
+    &__gallery {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

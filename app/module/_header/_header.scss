@@ -9,6 +9,7 @@
 
 .menu {
   &__list {
+    display: flex;
     &-item {
       text-decoration: none;
       color: #436372;
@@ -22,7 +23,7 @@
     display: none;
     position: relative;
     border: none;
-    width: 20px;
+    width: 25px;
     height: 3px;
     background-color: #a3bbc8;
     padding: 0;
@@ -30,7 +31,7 @@
     &::after {
       position: absolute;
       content: '';
-      width: 20px;
+      width: 25px;
       height: 3px;
       background-color: #a3bbc8;
       left: 0;
@@ -39,6 +40,17 @@
       top: -8px;
     }&::after {
       top: 8px;
+    }
+    &.active::before {
+      transform: rotate(45deg);
+      top: 0;
+    }
+    &.active::after {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+    & span.active  {
+      opacity: 0;
     }
   }
 }
@@ -109,10 +121,20 @@
 
 @media (max-width: 1100px){
   .menu {
-    display: none;
+    // display: none;
     &__btn {
       display: block;
       order: 1;
+    }
+    &__list {
+      display: block;
+      &-item {
+        display: inherit;
+        & + .menu__list-item {
+          padding-left: 0;
+          padding-top: 20px;
+        }
+      }
     }
   }
 }

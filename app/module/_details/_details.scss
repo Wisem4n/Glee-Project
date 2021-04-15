@@ -262,8 +262,150 @@
 
 @media (max-width: 768px){
   .details {
+    padding: 60px 0;
     & .products__gallery-item {
       max-width: 300px;
     }
+    &__inner {
+      margin-bottom: 0;
+    }
+    &-item__info {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-item__cart {
+      margin-bottom: 20px;
+    }
+    &-tabs__top {
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+      &-item {
+        margin-bottom: 10px;
+      }
+    }
   }
+  .related {
+    &__title {
+      margin: 60px 0 40px;
+    }
+    & .slick-prev,
+    & .slick-next {
+      margin-top: -85px;
+    } 
+  }
+}
+
+@media (max-width: 600px){
+  .details {
+    &-slider {
+      &__main {
+        width: 240px;
+        height: 400px;
+        padding: 10px;
+      }
+      &__additional {
+        display: none;
+      }
+    }
+    &-item {
+      margin: 0 auto;
+      text-align: center;
+      .star {
+        margin: 0 auto;
+      }
+      &__btn {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+    &-tabs {
+      &__top {
+        & a + a {
+          margin-left: 0;
+        }
+        &-item {
+          display: flex;
+          justify-content: center;
+          max-width: 260px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px){
+  .details .products {
+    &__gallery {
+      &-item {
+        max-width: 150px;
+        width: 100%;
+        justify-content: center;
+        min-height: 240px;
+        img {
+          height: 150px;
+          object-fit: contain;
+          padding-top: 20px;
+        }
+      }
+      &-price {
+        padding-bottom: 20px;
+      }
+      &-title {
+        margin-top: 0;
+      }
+    }
+    &-gallery__link-box {
+      display: none;
+    }
+  }
+  .related {
+    &__title {
+      font-size: 24px;
+    }
+    & .slick-prev,
+    & .slick-next {
+      width: 35px;
+      height: 35px;
+      margin-top: -78px;
+    }
+    & .slick-prev {
+      right: 40px;
+      &::before {
+        width: 20px;
+        height: 40px;
+      }
+    }
+    & .slick-next {
+      &::before {
+        width: 20px;
+        height: 40px;
+      }
+    }
+  }
+  .slick-list {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 380px){
+  .details .products {
+    &__gallery {
+      &-item {
+        max-width: 130px;
+        width: 100%;
+      }
+    }
+  }  
+}
+
+@media (max-width: 320px){
+  .details .products {
+    &__gallery {
+      &-item {
+        max-width: 120px;
+        width: 100%;
+      }
+    }
+  }  
 }
